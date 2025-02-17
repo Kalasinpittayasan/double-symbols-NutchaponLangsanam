@@ -1,20 +1,16 @@
 #include <stdio.h>
+int main(){
+int n;
 
-int main() {
-  int n;
-
-  // รับเลขจำนวนเต็มคู่
-  printf("Enter an even integer: ");
+  printf("เลข: ");
   scanf("%d", &n);
 
-  // ตรวจสอบว่าเป็นเลขคู่หรือไม่
   if (n % 2 != 0) {
     printf("Error: Input is not an even integer.\n");
-    return 1; // จบการทำงานด้วยรหัสข้อผิดพลาด
-  }
+    return 1;
+}
 
-  // แสดงเครื่องหมายสลับกัน
-  for (int i = 0; i < n; i++) {
+ for (int i = 0; i < n; i++) {
     if (i % 2 == 0) {
       printf("*");
     } else {
@@ -23,6 +19,5 @@ int main() {
   }
   printf("\n");
 
-  return 0; // จบการทำงานปกติ
+  return 0;
 }
-
