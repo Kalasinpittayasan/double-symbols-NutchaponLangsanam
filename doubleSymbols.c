@@ -1,19 +1,21 @@
+
 #include <stdio.h>
 
 int main() {
-  int n;
+    int n;
 
-  printf("Enter an integer: ");
-  scanf("%d", &n);
+    scanf("%d", &n);
 
-  if (n % 2 == 0) { // ตรวจสอบว่าเป็นเลขคู่หรือไม่
-    for (int i = 1; i < n; i += 2) { // วนลูปโดยเริ่มที่ 1 และเพิ่มทีละ 2
-      printf("*+"); // แสดงเครื่องหมายสลับกัน
-    }
-    printf("\n"); // ขึ้นบรรทัดใหม่
-  } else {
-    printf("Wrong input\n"); // แสดงข้อความผิดพลาด
-  }
 
+    if (n % 2 == 0 && n > 0) {
+        for (int i = 0; i < n / 2; i++) {
+            printf("*");
+            printf("+");
+        }
+        printf("\n");
+    } else {
+        printf("Wrong input\n");
+
+     }
   return 0;
 }
